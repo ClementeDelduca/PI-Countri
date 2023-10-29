@@ -1,11 +1,11 @@
 const { Router } = require("express");
 
-const { createActivityHandler, activityRouterGetHandler  } = require("../handlers/activity.handlers");
+const { create, activityRouterGetHandler  } = require("../handlers/activity.handlers");
 
-const activityRouter = Router();
+const activityRouter = Router();  //Crea una instancia de Router
 
-activityRouter.post("/", createActivityHandler ); //activityRouterPostHandler
+activityRouter.post("/", create ); //Define una ruta POST
 
-activityRouter.get("/", activityRouterGetHandler);
+activityRouter.get("/", activityRouterGetHandler); //Define una ruta GET
 
 module.exports = activityRouter;

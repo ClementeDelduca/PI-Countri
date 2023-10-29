@@ -1,11 +1,9 @@
-const { getCountryById, searchCountryByName, getCountriesApi } = require("../controllers/country.controllers");
+const { getCountryById, searchCountryByName, allCountry, getCountriesALL } = require("../controllers/country.controllers");
 
-
-
-const countryRouterHandler = async (req, res) => {
+const countryRouterHandler = async (req, res) => {   //Define una función asincrónica
     const { name } = req.query;
     try {
-      const results = name ? await searchCountryByName(name) : await getCountriesApi();
+      const results = name ? await searchCountryByName(name) : await getCountriesALL();
   
       if (name && results.length === 0) {
         throw new Error("Error: Country no encontrado");
@@ -18,7 +16,7 @@ const countryRouterHandler = async (req, res) => {
   };
 
 
-  const countryRouterIdHandler = async (req, res) => {
+  const countryRouterIdHandler = async (req, res) => {   //Define una función asincrónica
     const { id } = req.params;
     try {
       const country = await getCountryById(id);
@@ -37,6 +35,5 @@ const countryRouterHandler = async (req, res) => {
 
 module.exports = {
     countryRouterHandler,
-    countryRouterIdHandler,
-    
+    countryRouterIdHandler
 }

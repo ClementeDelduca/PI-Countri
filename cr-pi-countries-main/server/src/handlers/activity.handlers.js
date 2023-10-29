@@ -1,17 +1,16 @@
 const { createActivity, getAllActivity } = require("../controllers/activity.controllers");
 
-const createActivityHandler = async (req, res) => {
-    const {name, difficulty, duration, season} = req.body;
+const create = async function(req, res, next) {   //Define una función asincrónica
     try{
-    const newActivity = await createActivity(name, difficulty, duration, season);
-    res.status(201).json(newActivity);
-    }   catch (error) {
-    res.status(400).json({error: error.message});
+        const dataBody = await createActivity(req.body)
+        res.status(200).send(dataBody)
+    } catch(e) {
+        next(e)
     }
-};
+    
+}
 
-
-const activityRouterGetHandler = async (req, res) => {
+const activityRouterGetHandler = async (req, res) => {  //Define una función asincrónica
     const {name} = req.query;
     try{
     const results = await getAllActivity();
@@ -22,6 +21,6 @@ const activityRouterGetHandler = async (req, res) => {
 };
 
 module.exports = {
-    createActivityHandler,
+    create,
     activityRouterGetHandler
 }

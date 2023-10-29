@@ -31,7 +31,7 @@ function CreateActivity() {
 
   function handleSelect(e) {
     if (state.countries.includes(e.target.value)) {
-      console.log("You can not repeat the same country");
+      console.log("You cannot repeat the same country");//No se puede repetir el mismo país
     } else {
       setState({
         ...state,
@@ -70,29 +70,29 @@ function CreateActivity() {
       name.length <= 3
     ){
       setError(
-        "The name must not contain special characters and must be larger than two"
+        "The name must not contain special characters and must be more than two characters" //El nombre no debe contener caracteres especiales y debe tener más de dos caracteres
       );
       setMostrarError(true);
       return;
     }
     if (!name){
-      setError("Compleat this sector whit a name");
+      setError("Fill this space with a name"); //Completa este espacio con un nombre
       setMostrarError(true);
       return;
     }
 
     if (!difficulty) {
-      setError("You must select a Difficulty level");
+      setError("You must select a difficulty level"); //Debes seleccionar un nivel de dificultad
       setMostrarError(true);
       return;
     }
     if (!season.trim()) {
-      setError("You must select some season of the year");
+      setError("You must select a season of the year"); //Debes seleccionar alguna estación del año
       setMostrarError(true);
       return;
     }
     if (countries.length < 1) {
-      setError("You must select at least one country");
+      setError("You must select at least one country");  //Debes seleccionar al menos un país
       setMostrarError(true);
       return;
     }
@@ -104,7 +104,7 @@ function CreateActivity() {
       season: "",
       countries: [],
     });
-    alert("Your activity was successfully created");
+    alert("Your activity was created successfully"); //Tu actividad fue creada exitosamente
     navegate("/countries");
   }
   const PintarError = () => (
@@ -113,20 +113,9 @@ function CreateActivity() {
 
   return (
     <>
-      {/* <Navbar/> */}
+    
       <header className={styles.header}>
         <Link to="/countries">
-          {/* {width > movil ? (
-            <button className={styles.volver}>HOME</button>
-          ) : (
-            <button className={styles.volver}>
-              <img
-                src={flecha}
-                className={styles.button_movil_atras}
-                alt="atras"
-              />
-            </button>
-          )} */}
           <img className={styles.logo} src={logo} alt="logo" />
         </Link>
         <div>
@@ -164,8 +153,6 @@ function CreateActivity() {
                 name="duration"
                 value={state.duration}
                 type="time"
-                min="01:00"
-                max="12:00"
                 onChange={(e) => {
                   handleChange(e);
                 }}
@@ -262,7 +249,7 @@ function CreateActivity() {
             <label className={styles.label}>Country</label>
             <select
               className={styles.country}
-              placeholder="Selecciona el o los paises"
+              placeholder="Select the country or countries" //Selecciona el o los paises
               name="countries"
               onChange={(e) => handleSelect(e)}
               required

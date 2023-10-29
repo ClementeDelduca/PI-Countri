@@ -8,8 +8,3 @@ router.use("/activities", activityRouter);
 router.use("/countries", countryRouter);
 
 module.exports = router;
-
-
-
-
-module.exports = router;

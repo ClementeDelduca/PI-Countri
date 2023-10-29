@@ -133,9 +133,9 @@ function Home() {
           </div>
         ) : countries === "The country was not found" ? (
           <h1 className={style.search}>
-            ! Ups we did not find the Country!
+            ! Ups we can't find the country!
             <br />
-            Please try again
+            try again
           </h1>
         ) : (
           countries

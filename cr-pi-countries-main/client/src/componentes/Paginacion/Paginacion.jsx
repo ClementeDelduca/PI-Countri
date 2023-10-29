@@ -24,7 +24,7 @@ function Paginacion({ pag, setPag, max, input, setInput }) {
       setPag(e.target.value);
     } else {
       alert(
-        `The number of Pagaginas must be greater than or equal to 1 and quenor or equal to ${max}`
+        `The number of Pages must be greater than or equal to 1 and less than or equal to ${max}` //El número de Paginas debe ser mayor o igual a 1 y menor o igual a
       );
     }
   }

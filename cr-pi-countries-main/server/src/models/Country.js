@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     flags: {
-      type: DataTypes.STRING, //una secuencia de caracteres
+      type: DataTypes.STRING, 
       allowNull: false
     },
     continents: {

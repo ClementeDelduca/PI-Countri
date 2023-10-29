@@ -6,7 +6,7 @@
 
 
 .contenedor{
-    background-color: rgba(0, 0, 0, 0.733);
+    background-color:blue;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -19,6 +19,7 @@
 
 .nuevaActividad{
     border: none;
+    cursor: pointer;
     background: none;
     height: 1.5rem;
     width: revert;

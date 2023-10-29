@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config();  //Carga las variables de entorno definidas en un archivo .env
 const { Sequelize } = require("sequelize");
 
 const fs = require('fs');
@@ -32,7 +32,6 @@ sequelize.models = Object.fromEntries(capsEntries);
 const { Country, Activity } = sequelize.models;
 
 // Aca vendrian las relaciones
-// Product.hasMany(Reviews);
 Country.belongsToMany(Activity, {through: 'Country_Activity'});
 Activity.belongsToMany(Country, {through: 'Country_Activity'});
 

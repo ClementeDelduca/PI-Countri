@@ -54,7 +54,7 @@ export function countryById(id) {
 
 export function createActivity(activity) {
   return async (dispatch) => {
-    await axios.post(`${API_URL}/activity`, activity).then((result) => {
+    await axios.post(`${API_URL}/activities`, activity).then((result) => {
       return dispatch({
         type: CREATE_ACTIVITY,
         payload: result,
