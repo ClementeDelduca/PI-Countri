@@ -30,12 +30,10 @@
     }
     .formulario{
         padding: 2rem;
-        /* margin-top: 10%; */
         height: auto;
         width: 30rem;
         display: flex;
         margin: 3rem;
-        /* background-color: #bec7e1; */
         border: none;
         border-radius: 1rem;
         box-shadow: -1px 1px 22px 9px  rgb(55, 55, 55);
@@ -79,7 +77,6 @@
     .label{
         text-align: start;
         padding: none;
-        /* margin-left: 0.5rem; */
         font-size: 0.9rem;
         color: grey;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -98,7 +95,6 @@
         margin-left: 1rem;
         padding-left: 0.5rem;
         margin: 1rem;
-        /* text-align: left; */
         align-items: center;
     }
     
@@ -131,14 +127,10 @@
         color:rgb(0, 0, 0);
         border: none;
         font-weight: bold;
-        /* box-shadow: -6px 8px 12px -3px rgba(0,0,0,0.77);
-        -webkit-box-shadow: -6px 8px 12px -3px rgba(0,0,0,0.77);
-        -moz-box-shadow: -6px 8px 12px -3px rgba(0,0,0,0.77); */
         box-shadow: -1px 0px 4px 5px rgb(55, 55, 55);
     }
     
     .contenedorCountry{
-        /* width: 10rem; */
         width: 10rem; 
         width: auto;
         height: 3rem;
@@ -149,7 +141,6 @@
         border-radius: 0.5rem;
         text-align: justify;
         margin: 1rem;
-        /* margin-left: 0.8rem; */
         align-items: flex-start;
     }
     
@@ -181,7 +172,6 @@
     
     .contenedorC{
         display: flex;
-        /* max-width: 5rem; */
         flex-direction: row;
         justify-content: flex-start;
         align-content: stretch;

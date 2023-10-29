@@ -30,9 +30,8 @@
     color:rgb(55, 55, 55);
     text-align: center;
     margin-left: 0.5rem;
-    /* font-weight: bolder; */
 }
-.inputNumber{  /* font-size: 10px; */
+.inputNumber{  
     cursor: auto;
     border: 1px solid rgb(55, 55, 55);
     border-radius: 1rem;
@@ -42,7 +41,6 @@
     color: rgb(55, 55, 55);
     text-align: center;
     margin-left: 0.5rem;
-    /* font-weight: bolder; */
 }
 
 .anterior{
